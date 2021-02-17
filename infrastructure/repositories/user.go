@@ -28,3 +28,7 @@ func (ur *UserRepository) FetchByID(id string) (*User, error) {
 
 	return u, nil
 }
+
+func NewUserRepository(dbClient *storage.PostgresClient) *UserRepository {
+	return &UserRepository{dbClient: dbClient}
+}
