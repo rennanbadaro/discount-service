@@ -14,7 +14,7 @@ type PostgresClient struct {
 }
 
 func NewPostgresClient() (*PostgresClient, error) {
-	dbConfig := config.Config().PostgresConfig
+	dbConfig := config.GetConfig().PostgresConfig
 
 	pgConnString := fmt.Sprintf(
 		"host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",

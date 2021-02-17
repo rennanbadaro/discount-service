@@ -1,6 +1,8 @@
 package config
 
-import "os"
+import (
+	"os"
+)
 
 type postgresConfig struct {
 	Host     string
@@ -16,7 +18,7 @@ type config struct {
 
 var configInstance *config = nil
 
-func Config() *config {
+func GetConfig() *config {
 	if configInstance != nil {
 		return configInstance
 	}
