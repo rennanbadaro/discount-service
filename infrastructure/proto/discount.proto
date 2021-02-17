@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package discount;
+
+option go_package = "github.com/rennanbadaro/discount-calculator/infrastructure/proto";
+
+service DiscountService {
+  rpc GetDiscount(GetDiscountRequest) returns (GetDiscountResponse) {}
+}
+
+message Discount {
+  float percentage = 1;
+  int32 value_in_cents = 2;
+}
+
+message GetDiscountRequest {
+  string product_id = 1;
+  string user_id = 2;
+}
+
+message GetDiscountResponse {
+  Discount discount = 1;
+}
+
+// protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative hasher-store/discount-api.proto
