@@ -1,14 +1,16 @@
 package grpc
 
 import (
+	"fmt"
 	"net"
+	"os"
 
 	"github.com/rennanbadaro/discount-calculator/infrastructure/proto"
 	"google.golang.org/grpc"
 )
 
 func StartServer() error {
-	listener, err := net.Listen("tcp", ":9000")
+	listener, err := net.Listen("tcp", fmt.Sprintf(":%s", os.Getenv("PORT")))
 
 	if err != nil {
 		return err
