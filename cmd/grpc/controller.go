@@ -33,7 +33,7 @@ func (dc *DiscountController) GetDiscount(
 
 	response := proto.Discount{Percentage: discount.Percentage, ValueInCents: discount.ValueInCents}
 
-	log.Printf("product ID has %s %% discount for user ID %s", in.ProductId, in.UserId)
+	log.Printf("product ID %s has %.2f%% discount for user ID %s", in.ProductId, response.Percentage, in.UserId)
 
 	return &proto.GetDiscountResponse{Discount: &response}, nil
 }
