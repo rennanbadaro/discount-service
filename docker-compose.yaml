@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    restart: always
+    env_file: .env
+    container_name: hs-discount-calculator-api
+    ports:
+      - ${PORT}:${PORT}
+    networks:
+      - hs-discount-calculator-network
+    depends_on:
+      - db
+
+  db:
+    restart: always
+    image: postgres
+    env_file: .env
+    container_name: hs-discount-calculator-postgres
+    ports:
+      - ${DB_PORT}:5432
+    environment:
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    networks:
+      - hs-discount-calculator-network
+
+networks:
+  hs-discount-calculator-network:
+    driver: bridge
