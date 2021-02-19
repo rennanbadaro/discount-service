@@ -22,6 +22,8 @@ func (dc *DiscountController) GetDiscount(
 	ctx context.Context,
 	in *proto.GetDiscountRequest,
 ) (*proto.GetDiscountResponse, error) {
+	log.Printf("getting discount for product ID %s and user ID %s", in.ProductId, in.UserId)
+
 	discount, err := dc.service.GetDiscount(in.UserId, in.ProductId)
 
 	if err != nil {
@@ -30,6 +32,8 @@ func (dc *DiscountController) GetDiscount(
 	}
 
 	response := proto.Discount{Percentage: discount.Percentage, ValueInCents: discount.ValueInCents}
+
+	log.Printf("product ID has %s %% discount for user ID %s", in.ProductId, in.UserId)
 
 	return &proto.GetDiscountResponse{Discount: &response}, nil
 }
