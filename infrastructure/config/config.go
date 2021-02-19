@@ -25,7 +25,7 @@ func GetConfig() *config {
 
 	pgHost := os.Getenv("DB_HOST")
 	pgPort := os.Getenv("DB_PORT")
-	pgUser := os.Getenv("DB_USER")
+	pgUser := os.Getenv("DB_USERNAME")
 	pgPass := os.Getenv("DB_PASSWORD")
 	pgDB := os.Getenv("DB_NAME")
 
