@@ -8,10 +8,7 @@ services:
     restart: always
     env_file: .env
     container_name: hs-discount-service-api
-    ports:
-      - ${PORT}:${PORT}
-    networks:
-      - hs-discount-service-network
+    network_mode: host
     depends_on:
       - db
 
@@ -20,15 +17,8 @@ services:
     image: postgres
     env_file: .env
     container_name: hs-discount-service-postgres
-    ports:
-      - ${DB_PORT}:5432
     environment:
       - POSTGRES_USER=${DB_USERNAME}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
       - POSTGRES_DB=${DB_NAME}
-    networks:
-      - hs-discount-service-network
-
-networks:
-  hs-discount-service-network:
-    driver: bridge
+    network_mode: host
