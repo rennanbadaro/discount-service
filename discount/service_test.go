@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"bou.ke/monkey"
-	"github.com/rennanbadaro/discount-calculator/discount"
-	"github.com/rennanbadaro/discount-calculator/infrastructure/repositories"
+	"github.com/rennanbadaro/discount-service/discount"
+	"github.com/rennanbadaro/discount-service/infrastructure/repositories"
 	"github.com/stretchr/testify/assert"
 )
 

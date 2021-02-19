@@ -5,7 +5,7 @@ import (
 	"net"
 	"os"
 
-	"github.com/rennanbadaro/discount-calculator/infrastructure/proto"
+	"github.com/rennanbadaro/discount-service/infrastructure/proto"
 	"google.golang.org/grpc"
 )
 

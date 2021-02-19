@@ -1,4 +1,4 @@
-module github.com/rennanbadaro/discount-calculator
+module github.com/rennanbadaro/discount-service
 
 go 1.15
 

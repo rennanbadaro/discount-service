@@ -6,7 +6,7 @@ import (
 
 	_ "github.com/lib/pq"
 
-	"github.com/rennanbadaro/discount-calculator/infrastructure/config"
+	"github.com/rennanbadaro/discount-service/infrastructure/config"
 )
 
 type PostgresClient struct {

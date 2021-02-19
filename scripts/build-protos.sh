@@ -4,8 +4,8 @@ BASEDIR=$PWD
 PROTO_DEST=$BASEDIR/infrastructure/proto
 TEMP_REPO=$BASEDIR/temp-proto
 
-GO_MOD=github.com/rennanbadaro/discount-calculator
-GO_DISCOUNT_PROTO_PACKAGE="github.com\/rennanbadaro\/discount-calculator\/infrastructure\/proto"
+GO_MOD=github.com/rennanbadaro/discount-service
+GO_DISCOUNT_PROTO_PACKAGE="github.com\/rennanbadaro\/discount-service\/infrastructure\/proto"
 
 mkdir -p $TEMP_REPO $PROTO_DEST
 

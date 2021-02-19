@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package discount;
 
-option go_package = "github.com/rennanbadaro/discount-calculator/infrastructure/proto";
+option go_package = "github.com/rennanbadaro/discount-service/infrastructure/proto";
 
 service DiscountService {
   rpc GetDiscount(GetDiscountRequest) returns (GetDiscountResponse) {}

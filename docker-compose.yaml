@@ -7,11 +7,11 @@ services:
       dockerfile: Dockerfile.dev
     restart: always
     env_file: .env
-    container_name: hs-discount-calculator-api
+    container_name: hs-discount-service-api
     ports:
       - ${PORT}:${PORT}
     networks:
-      - hs-discount-calculator-network
+      - hs-discount-service-network
     depends_on:
       - db
 
@@ -19,7 +19,7 @@ services:
     restart: always
     image: postgres
     env_file: .env
-    container_name: hs-discount-calculator-postgres
+    container_name: hs-discount-service-postgres
     ports:
       - ${DB_PORT}:5432
     environment:
@@ -27,8 +27,8 @@ services:
       - POSTGRES_PASSWORD=${DB_PASSWORD}
       - POSTGRES_DB=${DB_NAME}
     networks:
-      - hs-discount-calculator-network
+      - hs-discount-service-network
 
 networks:
-  hs-discount-calculator-network:
+  hs-discount-service-network:
     driver: bridge

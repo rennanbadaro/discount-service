@@ -3,7 +3,7 @@ package discount
 import (
 	"time"
 
-	"github.com/rennanbadaro/discount-calculator/infrastructure/repositories"
+	"github.com/rennanbadaro/discount-service/infrastructure/repositories"
 )
 
 type Discount struct {

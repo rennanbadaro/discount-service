@@ -1,6 +1,6 @@
 package repositories
 
-import "github.com/rennanbadaro/discount-calculator/infrastructure/storage"
+import "github.com/rennanbadaro/discount-service/infrastructure/storage"
 
 type IProductRepository interface {
 	FetchByID(id string) (*Product, error)

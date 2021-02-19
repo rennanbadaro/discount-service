@@ -4,10 +4,10 @@ import (
 	"context"
 	"log"
 
-	"github.com/rennanbadaro/discount-calculator/discount"
-	"github.com/rennanbadaro/discount-calculator/infrastructure/proto"
-	"github.com/rennanbadaro/discount-calculator/infrastructure/repositories"
-	"github.com/rennanbadaro/discount-calculator/infrastructure/storage"
+	"github.com/rennanbadaro/discount-service/discount"
+	"github.com/rennanbadaro/discount-service/infrastructure/proto"
+	"github.com/rennanbadaro/discount-service/infrastructure/repositories"
+	"github.com/rennanbadaro/discount-service/infrastructure/storage"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

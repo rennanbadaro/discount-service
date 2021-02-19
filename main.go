@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
-	"github.com/rennanbadaro/discount-calculator/cmd/grpc"
+	"github.com/rennanbadaro/discount-service/cmd/grpc"
 )
 
 func main() {
