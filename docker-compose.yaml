@@ -10,9 +10,9 @@ services:
     container_name: hs-discount-service-api
     network_mode: host
     depends_on:
-      - db
+      - database
 
-  db:
+  database:
     restart: always
     image: postgres
     env_file: .env
