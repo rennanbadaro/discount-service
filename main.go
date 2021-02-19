@@ -10,9 +10,9 @@ import (
 
 func main() {
 	appEnv := os.Getenv("APP_ENV")
-	if appEnv == "local" || appEnv == "test" {
+	if appEnv != "production" {
 		if err := godotenv.Load(); err != nil {
-			log.Fatalf("failed to load .env file: %v", err)
+			log.Printf("failed to load .env file: %v\n", err)
 		}
 	}
 
